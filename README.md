@@ -14,23 +14,29 @@ XGBClassifier (XGBoost)
 Pipeline: StandardScaler + XGBClassifier
 Binary classification (Churn / No Churn)
 
-5. Output
+6. Output
 churn_prediction (0 / 1)
 churn_probability
 risk_label (Low / Medium / High)
 
-6. Risk Label Logic
+7. Risk Label Logic
 Probability < 0.30 → Low
 0.30 – 0.60 → Medium
 0.60 → High
 
-7. API
+8. Other Features
+Implemented input schema validation, structured logging, and exception handling to improve production robustness and API reliability.
+
+9. Evaluation result
+Achieved a ROC-AUC score of 0.91 through feature selection and hyperparameter tuning.
+
+10. API
 Framework: FastAPI
 Endpoint: POST /predict
 
-8. Input: JSON customer data
+11. Input: JSON customer data
 
-9. Output: Churn prediction with probability
+12. Output: Churn prediction with probability
     
-10. How to run: uvicorn app.main:app --reload
+13. How to run: uvicorn app.main:app --reload
  
